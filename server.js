@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors')
 
-const port = 3001;
+const port = process.env.PORT || 3001;
 
 let count = 0;
 
