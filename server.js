@@ -17,10 +17,10 @@ app.put("/count", (req, res) => {
     res.send();
 });
 
-app.put("/reset", (req, res) => {
-  count = 0;
-  res.send();
-});
+// app.put("/reset", (req, res) => {
+//   count = 0;
+//   res.send();
+// });
 
 app.listen(port, function() {
   console.log('Server running at :' + port + '/');
