@@ -61,10 +61,12 @@ app.get("/count",readFile);
 
 app.put("/count",increaseCount);
 
-// app.put("/reset", (req, res) => {
-//   count = 0;
-//   res.send();
-// });
+app.put("/reset", async (req, res) => {
+  await fs.writeFile(filePath + "/counter.txt", "0", 'utf8', (err) => {
+    //
+  });
+  res.send();
+});
 
 
 app.listen(port, function() {
