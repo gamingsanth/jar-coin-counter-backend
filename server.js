@@ -31,10 +31,9 @@ app.put("/count", (req, res) => {
 });
 
 app.put("/reset", async (req, res) => {
-  connection.query("update counter set count = 0", (err, res, fields) => {
+  connection.query("update counter set count = 0", (err, result, fields) => {
     res.send();
   })
-  
 });
 
 
