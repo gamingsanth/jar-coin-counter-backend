@@ -1,0 +1,4 @@
+fileignoreconfig:
+- filename: server.js
+  checksum: dd8bf66c50a81b524f2bdc5672b23275c81481479460525108b75597d23f1a82
+version: "1.0"
