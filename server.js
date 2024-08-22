@@ -30,6 +30,18 @@ app.put("/count", (req, res) => {
   })
 });
 
+app.put("/decrease", (req, res) => {
+  connection.query("select count from counter", (err, result, fields) => {
+    if(result[0].count > 0) {
+      connection.query("update counter set count = ?", [result[0].count - 1], (err, result1, fields) => {
+        res.send();
+      })
+    } else {
+      res.send();
+    }
+  })
+});
+
 app.put("/reset", async (req, res) => {
   connection.query("update counter set count = 0", (err, result, fields) => {
     res.send();
